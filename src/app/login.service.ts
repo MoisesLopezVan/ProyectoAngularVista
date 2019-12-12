@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
  
-  private apiRoot = 'http://backendalumno.sytes.net/api/v1/'
+  private apiRoot = 'http://ec2-54-89-219-3.compute-1.amazonaws.com/api/v1/'
   constructor(private http: HttpClient) {
   }
   

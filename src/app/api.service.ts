@@ -8,7 +8,7 @@ import { HttpClient, HttpClientModule, HttpParams, HttpHeaders } from '@angular/
 export class ApiService {
   
   
-  private apiRoot = 'http://backendalumno.sytes.net/api/v1/'
+  private apiRoot = 'http://ec2-54-89-219-3.compute-1.amazonaws.com/api/v1/'
 
   constructor(private http: HttpClient) {
   }
