@@ -1,0 +1,28 @@
+<div class="modal-header">
+    <h4 class="modal-title diseño1">Nuevo registro</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>  
+  <br>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-md-9">
+      <label class="label-diseño">Nombre del estudiante</label>
+      <input type="text" [formControl]="nombre" class="form-control diseño2"  placeholder="Ingrese su nombre">
+      <label class="label-diseño">Apellido (Paterno-Materno): </label>
+      <input type="text" [formControl]="apellido" class="form-control diseño2" placeholder="Ingrese su apellidos">
+      <label class="label-diseño">Sexo: </label>
+      <input type="text" [formControl]="sexo" class="form-control diseño2" placeholder="Ingrese su sexo">
+      <label class="label-diseño">Edad: </label>
+      <input type="text" [formControl]="edad" class="form-control diseño2"  placeholder="Ingrese su edad">
+      <label class="label-diseño">Direccion: </label>
+      <input type="text" [formControl]="direccion" class="form-control diseño2"  placeholder="Ingrese su direccion"> 
+      <label class="label-diseño">Carrera: </label>
+      <input type="text" [formControl]="carrera" class="form-control diseño2" placeholder="Ingrese su carrera">
+      <div class=" modal-footer">
+        <button class="btn btn-secondary" (click)="guardar()">Guardar registro</button>
+      </div>
+    </div>
+  </div>
+</div>

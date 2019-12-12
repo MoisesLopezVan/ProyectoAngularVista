@@ -1,0 +1,59 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+    <div class="row justify-content-end">
+      &nbsp;
+      &nbsp;
+      <div class="container" ng-controller="listado">
+        <div class="container">
+          <div class="row">
+            <h3>Filtros</h3> &nbsp; &nbsp;
+            <button type="submit" class="btn btn-primary mb-2"  (click) = "filtrar1()">Buscar</button> &nbsp; &nbsp;
+            <button type="submit" class="btn btn-primary mb-2" (click) = "actualizarfiltro()">Actualizar</button>
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+            <!-- <button type="submit" class="btn btn-primary mb-2" (click) = "Busqueda()">Busqueda Especifica</button> -->
+            &nbsp; &nbsp;<button class="btn  btn-primary align-self-center" (click)="open()">Nuevo estudiante</button>
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+            <button type="button" class="btn btn-danger" (click) = "cerrarSession()">Cerrar Session</button>
+          </div>
+          <div class="col-sm-6">
+            <input type="text" class="form-control dropdown-item" #name="ngModel" ngModel="item.nombres" [(ngModel)]="busquedaNombre"
+            [ngModelOptions]="{standalone: true}" class="form-control" required placeholder="Nombre">&nbsp; 
+            <input type="text" class="form-control dropdown-item" #name="ngModel" ngModel="item.edad" [(ngModel)]="busquedaEdad"
+            [ngModelOptions]="{standalone: true}" class="form-control" required placeholder="Edad">&nbsp;   
+            <input type="text" class="form-control dropdown-item" #name="ngModel" ngModel="item.carrera" [(ngModel)]="busquedaCarrera"
+            [ngModelOptions]="{standalone: true}" class="form-control" required placeholder="Carrera">&nbsp;  
+            <!-- <input type="text" class="form-control dropdown-item" #name="ngModel" ngModel="item.id" [(ngModel)]="busquedaId"
+            [ngModelOptions]="{standalone: true}" class="form-control" required placeholder="#ID"*>      -->
+          </div>
+        </div>
+       <br>
+       <div class="container">
+        <div class="row">
+          <div *ngFor="let item of registro" class="card col-sm-6">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align:center">Estudiante No.{{item.id}}</h5>
+              <p class="card-text" style="text-align:justify">
+                Nombre del estudiante: <strong>{{item.nombres}}</strong><br>
+                Apellidos: <strong>{{item.apellidos}}</strong><br>
+                Edad: <strong>{{item.edad}}</strong><br>
+                Sexo: <strong>{{item.sexo}}</strong><br>
+                Direccion: <strong>{{item.direccion}}</strong><br>
+                Carrera: <strong>{{item.carrera}}</strong><br>
+              </p>
+              <div class="centrar" style="text-align:center">
+                <button (click)="openedit(item.id)" class="btn btn-primary">Editar registro</button>
+                <br><br>
+                <button class="btn btn-danger" (click)="opendelete(item.id)">Eliminar registro</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      &nbsp;
+      &nbsp;
+    </div>
+  </div>
+  
+  
+  
