@@ -58,14 +58,16 @@ export class VistaComponent {
     this.api.delete(id).subscribe();
   }
 
-  filtrar1() {
+  filtrar() {
     //Busqueda Nombre
     console.log(this.busquedaNombre);
     let filtro1 = this.registro.filter(registro => {
-      return registro.nombres.includes(this.busquedaNombre);
+      return registro.nombres.includes(this.busquedaNombre);   
     })
     this.registro = filtro1; 
-    alert('* * * * Si deseas buscar otro nombre, Haz click "Actualizar" * * * *');
+    alert('* * * * Si deseas agregar otro nombre, "Haz click actulizar"  * * * *');
+
+   // alert('* * * * Si deseas buscar otro nombre, Haz click "Actualizar" * * * *');
     /*let filtro2 = this.registro.filter(registro => {
       registro.edad.includes(this.busquedaEdad);
       return registro.edad.includes(this.busquedaEdad);;
