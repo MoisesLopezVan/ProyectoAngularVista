@@ -12,7 +12,6 @@ import { HttpClientModule } from '@angular/common/http'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { VistaComponent } from './vista/vista.component';
 import { EditarComponent } from './editar/editar.component';
-import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import { FilterPipe } from './pipes/filter.pipe';
     RegistroComponent,
     VistaComponent,
     EditarComponent,
-    FilterPipe,
   ],
   imports: [
     BrowserModule,
